@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-
 """Class to subsample minibatches by balancing positives and negatives.
 
 Subsamples minibatches based on a pre-specified positive fraction in range

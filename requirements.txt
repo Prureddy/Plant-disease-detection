@@ -9,3 +9,4 @@ pathlib
 matplotlib 
 python-resize-image
 protobuf>=3.20.0,<4.0.0
+

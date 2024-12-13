@@ -1,12 +1,39 @@
+#Classification and detection
+#CNN - Convolutional Neural Networks
+#GAN - Generative Adversial Networks
+
+#Machine Learning(Numerical), Deep learning(Image, Video) 
+
+#Tech Stack
+#CNN - Convolutional Neural Networks
+#Object Detection using OpenCV(Computer Vision) - feature extraction from image
+#Python  - programming language 
+#HTML, CSS
+#Streamlit(python web interface Framework) - web interface/frontend
+#Deep Learning - subset of machine learning 
+#Tensorflow, Keras
+#relu - Rectified linear unit (activation function)
+
+
+#Steps to Build the Model
+#1.Data Collection - Image Dataset(Plant leaf photos 14 Classes)
+#2.Pre Processing - 
+#3.Model Building (deep learning - CNN)
+#4.Training 
+#5.Evaluation 
+
+
+
 import tensorflow as tf
 import os
-import cv2
-import streamlit as st
-import numpy as np
-from keras.preprocessing import image as keras_image
-from utils import label_map_util
+import cv2 #OpenCV
+import streamlit as st 
+import numpy as np 
+from keras.preprocessing import image as keras_image 
+from utils import label_map_util 
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont #Pillow
+
 st.set_page_config(page_title="Plant Disease Detection and Classification")
 
 
@@ -58,7 +85,7 @@ num_detections = detection_graph.get_tensor_by_name('num_detections:0')
 
 # Function to draw bounding box and labels on the image
 def draw_bounding_box_on_image(image, ymin, xmin, ymax, xmax, color, thickness=3, display_str_list=()):
-    image_pil = Image.fromarray(np.uint8(image)).convert('RGB')
+    image_pil = Image.fromarray(np.uint8(image)).convert('RGB') #Red, Green, Blue
     draw = ImageDraw.Draw(image_pil)
     im_width, im_height = image_pil.size
     (left, right, top, bottom) = (xmin * im_width, xmax * im_width,
@@ -168,7 +195,7 @@ def classify_disease(image_path):
 
 # Streamlit application
 import streamlit as st
-from PIL import Image
+from PIL import Image 
 
 def main():
     st.set_option('deprecation.showfileUploaderEncoding', False)

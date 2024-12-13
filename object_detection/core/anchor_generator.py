@@ -13,6 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
+
 """Base anchor generator.
 
 The job of the anchor generator is to create (or load) a collection

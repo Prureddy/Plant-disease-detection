@@ -198,7 +198,7 @@ import streamlit as st
 from PIL import Image 
 
 def main():
-    st.set_option('deprecation.showfileUploaderEncoding', False)
+    #st.set_option('deprecation.showfileUploaderEncoding', False)
 
     # Create the navbar
     st.markdown(
